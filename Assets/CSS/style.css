@@ -1,0 +1,83 @@
+
+/* Global reset and box sizing */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+/* BODY BACKGROUND */
+body {
+  margin: 0;
+  background-image: url(../images/rodent_grass.jpg);
+  background-size: cover;        /* cover entire screen */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;  /* fixed when scrolling */
+}
+
+/* MAIN LAYOUT */
+main {
+  width: 700px;                  /* fixed width */
+  margin: 0 auto;                /* centered horizontally */
+  background: rgba(63, 70, 56, 0.9); /* dark green 90% opacity */
+  padding: 50px;                 /* padding on all sides */
+  border: 5px solid #a6a092;     /* frame border */
+}
+
+/* HEADER */
+header {
+  background: #636954;           /* header background */
+  color: #e5dcd3;                /* light beige text */
+  border: 5px solid #a6a092;     /* surround entire header */
+  padding: 5px;                  /* header padding */
+  text-align: center;            /* center all header content */
+}
+header img {
+  display: block;
+  margin: 0 auto;                /* centered image */
+  width: 200px;                  /* width requirement */
+  height: auto;                  /* maintain aspect ratio */
+  padding: 5px;                  /* image padding */
+}
+header h1, header h2, header h3 {
+  margin: 10px 0;
+  color: #e5dcd3;
+}
+
+/* NAVIGATION */
+nav { 
+  text-align: center;            /* center inline links */
+  margin-top: 15px;
+}
+nav a {
+  display: inline-block;         /* inline and controllable spacing */
+  color: #e5dcd3;                /* link text color */
+  text-decoration: none;         /* no underline */
+  padding: 5px;                  /* padding around text */
+  margin: 0 10px;                /* 10px horizontal spacing between links */
+}
+nav a:hover {
+  background: #ffffff;           /* hover background white */
+  color: #000000;                /* default dark text */
+}
+
+/* SECTION CONTENT */
+section {
+  background: #636954;           /* section background */
+  color: #e5dcd3;                /* text color */
+  border: 5px solid #a6a092;     /* section border */
+  padding: 5px;                  /* padding on all sides */
+  text-align: center;           /* justified text */
+}
+section p {
+  font-size: 18px;               /* paragraph text size */
+  margin: 25px 50px;             /* 25px top/bottom, 50px left/right */
+  text-align:justify;
+}
+
+/* Default images in sections */
+section img {
+  display: block;                /* displayed as a block */
+  margin: 0 auto;                /* centered horizontally */
+  width: 50%;                    /* width set to 50% */
+  height: auto;                  /* maintain aspect ratio */
+  border: 3px solid #a6a092;     /* 3px border */
+}

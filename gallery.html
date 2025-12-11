@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=700, initial-scale=1" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <style>
+    /* Page-specific overrides for the gallery */
+    section {
+      position: relative;
+      overflow: hidden; /* avoid scrollbars during fade */
+    }
+    /* Single slideshow image: full width, 5px padding, no border */
+    section img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      border: none; /* no borders for gallery images */
+      transition: opacity 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="Assets/images/rat_Header.png">
+      <h1>Gallery</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <section>
+      <!-- Slideshow: uses embedded JavaScript to cycle images with fade every 2 seconds -->
+      <img src="Assets/images/bed.png">
+    </section>
+
+    <script>
+      (function() {
+        const images = [
+          'Assets/images/bed.png',
+          'Assets/images/christmas_baub.jpg',
+          'Assets/images/lookup.jpg',
+          'Assets/images/eating.jpg',
+          'Assets/images/lookup2.jpg',
+          'Assets/images/rose.jpg'
+        ];
+        const img = document.querySelector('section img');
+        let idx = 0;
+        img.style.opacity = 1;
+        setInterval(() => {
+          img.style.opacity = 0;
+          setTimeout(() => {
+            idx = (idx + 1) % images.length;
+            img.src = images[idx];
+            img.style.opacity = 1;
+          }, 600); // match CSS transition duration
+        }, 2000); // change every 2 seconds
+      })();
+    </script>
+  </main>
+</body>
+</html>
